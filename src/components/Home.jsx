@@ -4,6 +4,7 @@ import Files from "./files"
 import Emails from "./emails"
 import Statistics from './statistics'
 import SideBar from './sidebar/SideBar'
+import PrivateRoutes from './auth/PrvateRoutes';
 
 const Home =  props => {
     return (     
@@ -11,9 +12,9 @@ const Home =  props => {
             <SideBar/>
             {/**Section to load according with the route */ }
             <div className="section-container">
-                <Route path="/home/files" exact component={Files}></Route>
-                <Route path="/home/emails" component={Emails}></Route>
-                <Route path="/home/statistics" component={Statistics} ></Route>
+                <PrivateRoutes path="/home/files"  component={Files}/>
+                <PrivateRoutes path="/home/emails"  component={Emails}/>
+                <PrivateRoutes path="/home/statistics"   component={Statistics} />
             </div>
         </div>
      );
