@@ -9,9 +9,10 @@ const Routes = () => {
     return (
         <FilesState>
             <Router>
+                
                 <Switch>
                     <Route exact path="/" component={Login}></Route>
-                    <Route exact path="/home" component={Home}></Route>
+                    <Route path="/home" component={Home}></Route>
                 </Switch>
             </Router>
         </FilesState>
