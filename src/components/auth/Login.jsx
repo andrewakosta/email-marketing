@@ -1,6 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { useEffect } from 'react';
+import authContext from '../../context/auth/authContext'
 
-const Login = () => {
+const Login = (props) => {
+    const authContext_ = useContext(authContext) 
+   
+    const { login, authenticate, message} = authContext_ 
+
+
     const [register, setRegisterStatus] = useState(false)
 
     const [user, setUser] = useState({
@@ -10,6 +17,12 @@ const Login = () => {
 
     const {email, password} = user;
 
+    useEffect(() => {
+        if(authenticate){
+            props.history.push("/home/files")
+        }
+      //eslint-disable-next-line   
+    },[message, authenticate, props.history])
     const onChange = e => {
         setUser({
             ...user, 
@@ -17,14 +30,20 @@ const Login = () => {
         })
     }
     const handleSumit = e => {
-        alert(email + "  +++  " + password)
+        e.preventDefault()
+        const data = {
+            email, 
+            password
+        }
+        login(data)   
     }
     const setRegisterStatus_ = e => {
         setRegisterStatus(!register)
     }
     return ( 
-       <>
-            {
+       <>   
+             {message ? message: null}
+            {   
                 register
                  
                 ?

@@ -1,10 +1,11 @@
 import React from 'react'
-import { Route} from 'react-router-dom';
+import {  Route, Switch} from 'react-router-dom';
 import Files from "./files"
 import Emails from "./emails"
 import Statistics from './statistics'
 import SideBar from './sidebar/SideBar'
 import PrivateRoutes from './auth/PrvateRoutes';
+import NotFound from './NotFound'
 
 const Home =  props => {
     return (     
@@ -12,9 +13,12 @@ const Home =  props => {
             <SideBar/>
             {/**Section to load according with the route */ }
             <div className="section-container">
-                <PrivateRoutes path="/home/files"  component={Files}/>
-                <PrivateRoutes path="/home/emails"  component={Emails}/>
-                <PrivateRoutes path="/home/statistics"   component={Statistics} />
+                <Switch>
+                    <PrivateRoutes path="/home/files"  exact component={Files}/>
+                    <PrivateRoutes path="/home/emails" exact  component={Emails}/>
+                    <PrivateRoutes path="/home/statistics" exact  component={Statistics} />
+                    <Route component={NotFound}/>
+                </Switch>
             </div>
         </div>
      );

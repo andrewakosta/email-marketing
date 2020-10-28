@@ -4,18 +4,23 @@ import Home from '../components/Home';
 import Login from '../components/auth/Login';
 import FilesState from '../context/files/FilesState'
 import PrivateRoutes from '../components/auth/PrvateRoutes';
+import NotFound from '../components/NotFound'
+import AuthSatate from '../context/auth/authState' 
 
 
 const Routes = () => {
     return (
+       <AuthSatate>
         <FilesState>
             <Router>
                 <Switch>
                     <Route exact path="/" component={Login}></Route>
                     <PrivateRoutes  path="/home" component={Home}/>
+                    <Route component={NotFound}/>
                 </Switch>    
-            </Router>
+            </Router>   
         </FilesState>
+        </AuthSatate>  
      );
 }
  
