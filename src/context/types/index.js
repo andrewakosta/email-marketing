@@ -1,4 +1,8 @@
+
+//Files
 export const GET_FILES = "GET_FILES_XLSX"
+export const UPLOAD_FILES = "UPLOAD_FILES"
+export const REFRESH_FILES = "REFRESH_FILES"
 
 //User
 export const GET_AUTHENTICATED_USER = "GET_AUTHENTICATED_USER"

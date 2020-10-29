@@ -7,6 +7,7 @@ export default (state, action)=> {
                 ...state, 
                 authenticate:true,
                 user:action.payload,
+                loadingUser:true
             }
         case REGSITER:    
         case LOGIN:

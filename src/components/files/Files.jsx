@@ -1,17 +1,36 @@
 import React from 'react';
 import { useContext, useEffect } from 'react';
-import fileContext from '../../context/files/filesContex'
+import filesContext from '../../context/files/filesContex'
+import authContext from '../../context/auth/authContext'
+import File  from './File'
 const Files = () => {
     
-    const filesContext = useContext(fileContext)
-    const {value, getFiles} = filesContext
+    const {files, getFiles, uploadFiles, loading, refreshFiles} = useContext(filesContext)
+    
+    const {user, loadingAuth} = useContext(authContext)
 
     useEffect(() => {
-        getFiles()
+
+     if(true){
+      
+        getFiles(user._id)
+
+     }
      //eslint-disable-next-line   
-    }, [])
+    },[refreshFiles])
+
+    const handleInputFile = e => {
+        uploadFiles(e.target.files,user._id)
+
+    }
     return ( 
-        <h>Files... {value ? "true":"false"} </h>
+        <>  
+            <div>
+                <input type="file" accept=".xlsx"  multiple onChange={handleInputFile}/>
+            </div>
+            {loading ? "Loading..": files.length === 0  ? "No files" : files.map((file, index)=> <File key={index} file={file}/>) }
+            
+        </>
      );
 }
  

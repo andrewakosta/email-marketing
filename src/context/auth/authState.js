@@ -12,7 +12,7 @@ const AuthSatate = props => {
         token: localStorage.getItem('token'),
         authenticate:null,
         user:null,
-        loading:null, 
+        loadingUser:null, 
         message:null
     }
 
@@ -33,8 +33,7 @@ const AuthSatate = props => {
 
             dispatch({
                 type:GET_AUTHENTICATED_USER,
-                payload:response.data.user,
-                
+                payload:response.data.user,    
             })
         }catch(error){
             alert(error.response.data.msg)
@@ -80,6 +79,8 @@ const AuthSatate = props => {
     return ( 
         <authContext.Provider
             value={{
+                loadingUser:state.loadingUser,
+                user:state.user,
                 token:state.token,
                 authenticate:state.authenticate,
                 message:state.message,
