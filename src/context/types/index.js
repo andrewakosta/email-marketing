@@ -3,9 +3,14 @@
 export const GET_FILES = "GET_FILES_XLSX"
 export const UPLOAD_FILES = "UPLOAD_FILES"
 export const REFRESH_FILES = "REFRESH_FILES"
+export const GET_DATA_OF_ONE_FILE = "GET_DATA_OF_ONE_FILE"
 
 //User
 export const GET_AUTHENTICATED_USER = "GET_AUTHENTICATED_USER"
 export const LOGIN = "LOGIN"
 export const REGSITER = "REGISTER"
 export const ERROR_AUTH = "ERROR_AUTH"
+
+
+//Emails
+export const CHANGE_STATUS_OF_ONE_EMAIL = "CHANGE_STATUS_OF_ONE_EMAIL"

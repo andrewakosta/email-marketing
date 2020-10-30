@@ -8,10 +8,13 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.21.0",
     "axis": "^1.0.0",
+    "jodit-react": "^1.0.66",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-froala-wysiwyg": "^3.2.2-1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "suneditor-react": "^2.14.4"
   },
   "scripts": {
     "start": "react-scripts start",

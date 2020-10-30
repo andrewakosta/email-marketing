@@ -3,7 +3,7 @@ import { useContext, useEffect } from 'react';
 import filesContext from '../../context/files/filesContex'
 import authContext from '../../context/auth/authContext'
 import File  from './File'
-const Files = () => {
+const Files = (props) => {
     
     const {files, getFiles, uploadFiles, loading, refreshFiles} = useContext(filesContext)
     
@@ -28,7 +28,7 @@ const Files = () => {
             <div>
                 <input type="file" accept=".xlsx"  multiple onChange={handleInputFile}/>
             </div>
-            {loading ? "Loading..": files.length === 0  ? "No files" : files.map((file, index)=> <File key={index} file={file}/>) }
+            {loading ? "Loading..": files.length === 0  ? "No files" : files.map((file, index)=> <File key={index} history={props.history} file={file}/>) }
             
         </>
      );
