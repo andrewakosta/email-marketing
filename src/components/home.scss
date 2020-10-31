@@ -1,0 +1,15 @@
+.container {
+  display: grid;
+  grid-template: 100vh / 15% 1fr;
+  background-color: #121219;
+
+  .section-container {
+    padding: 10px 15px 8px 15px;
+    height: 100vh;
+    overflow-y: scroll;
+    box-sizing: border-box;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Ubuntu:ital,wght@1,700&display=swap");
+.email-container {
+  background-color: #1b1b24;
+  margin-bottom: 15px;
+  padding: 12px;
+  -webkit-box-shadow: 2px 3px 21px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 3px 21px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 3px 21px -3px rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+
+  .user-email {
+    font-family: "Itim", cursive;
+    color: rgb(114, 119, 106);
+    font-size: 18px;
+    width: 30%;
+    display: inline-block;
+    margin-right: 30px;
+  }
+  .user-name {
+    color: rgb(95, 110, 95);
+    font-weight: bold;
+    font-family: "Itim", cursive;
+  }
+  .not-allow {
+    cursor: pointer;
+    border: solid 1px rgb(165, 65, 65);
+    font-weight: bold;
+    float: right;
+    border-radius: 12px;
+    color: rgb(165, 65, 65);
+    padding: 3px 12px;
+  }
+  .allow {
+    cursor: pointer;
+    border: solid 1px rgb(77, 165, 65);
+    font-weight: bold;
+    float: right;
+    border-radius: 12px;
+    color: rgb(85, 165, 65);
+    padding: 3px 12px;
+  }
+}

@@ -3,11 +3,14 @@ import React,{useContext} from 'react'
 import filesContext from '../../context/files/filesContex'
 import authContext from '../../context/auth/authContext'
 import emailsContext from '../../context/emails/emailsContext'
+import {RiFileExcel2Fill} from 'react-icons/ri'
+import {MdDelete} from 'react-icons/md'
+import './file.scss'
 const File = ({file,history}) => {
 
     const {deleteFileByName} = useContext(filesContext)
     const {user} = useContext(authContext)
-    const {setEmails, emails} = useContext(emailsContext)
+    const {setEmails} = useContext(emailsContext)
 
     const deleteFile = (fileName)=> {
         deleteFileByName(fileName, user._id)
@@ -17,9 +20,18 @@ const File = ({file,history}) => {
         history.push("/home/emails")
     }
     return ( 
-        <div >
-            <article  style={{margin:"10px", padding:"5px", backgroundColor:"purple"}}>
-                <div> <span onClick={() => setEmails_(file.name)}>{file.originalFilename}</span> <a style={{float:"right"}} onClick={()=> deleteFile(file.name)}>Delete</a></div>
+        <div className='file-container'>
+            <article >
+                <div> 
+                    <span 
+                       onClick={() => setEmails_(file.name)}
+                       ><i><RiFileExcel2Fill/></i><span className='file-name'>{file.originalFilename}</span>
+                    </span> 
+                    <a 
+                       onClick={()=> deleteFile(file.name)}
+                       ><i><MdDelete/></i>
+                    </a>
+                </div>
             </article>
         </div>
      );

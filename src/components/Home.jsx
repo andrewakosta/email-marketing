@@ -6,10 +6,11 @@ import Statistics from './statistics'
 import SideBar from './sidebar/SideBar'
 import PrivateRoutes from './auth/PrvateRoutes';
 import NotFound from './NotFound'
+import './home.scss'
 
 const Home =  props => {
     return (     
-        <div className="container" style={{display:"flex"}}>
+        <div className="container" >
             <SideBar/>
             {/**Section to load according with the route */ }
             <div className="section-container">

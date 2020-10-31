@@ -1,17 +1,22 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-const SideBar = () => {
+import './sideBar.scss'
+import {FaFolder} from 'react-icons/fa'
+import {GoGraph} from 'react-icons/go'
+import {IoMdMail} from 'react-icons/io'
+const SideBar =  () => {
     return ( 
-        <div style={{backgroundColor:"blueviolet", height:"100vh", width:"250px"}}>
-            <p><center>User Name</center></p>
+        <div className="sidebar">
+            
+            <div className="avatar"></div>
 
-            <div style={{display:"flex", flexDirection:"column"}}>
-                <NavLink to="/home/files" activeClassName="selected">Files</NavLink>
-                <NavLink to="/home/emails" activeClassName="selected">Emails</NavLink>
-                <NavLink to="/home/statistics" activeClassName="selected">Statistics</NavLink>
+            <div className='links'>
+                <NavLink to="/home/files" className='link' activeClassName="selected"> <i><FaFolder/></i>Files</NavLink>
+                <NavLink to="/home/emails" className='link' activeClassName="selected"><i><IoMdMail/></i>Emails</NavLink>
+                <NavLink to="/home/statistics" className='link' activeClassName="selected"><i><GoGraph/></i>Statistics</NavLink>
             </div>
         </div>
-    );
+    )
 }
  
 export default SideBar;

@@ -1,6 +1,8 @@
 import React, {useRef, useContext}from 'react'
 import JoditEditor from "jodit-react";
 import emailsContext from '../../context/emails/emailsContext'
+import {MdSend} from 'react-icons/md'
+import './editor.scss'
 const Editor = ({history}) => {
 const {sendEmails} = useContext(emailsContext)    
 const editor = useRef(null)
@@ -19,14 +21,15 @@ const handleSumitEmail=() =>{
 }
 return (
     <>
-        <div>
+        <div className='editor-container'>
+            <input type="text" placeholder='...Subject...'/>
             <JoditEditor
                 ref={editor}
                 config={config}
                 tabIndex={1} // tabIndex of textarea
             />
 
-            <button onClick={handleSumitEmail}>Send Emails</button>
+            <button className='btn-send' onClick={handleSumitEmail}><i><MdSend/></i>Send Emails</button>
         </div>
     </>    
     );
