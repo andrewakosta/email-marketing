@@ -1,68 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Email Marketing
 
-## Available Scripts
+![status](https://img.shields.io/badge/status-running-green.svg?colorB=00C106) ![readme](https://img.shields.io/badge/readme-OK-green.svg?colorB=00C106) ![database](https://img.shields.io/badge/database-none-green.svg?colorB=00C106) ![commits](https://img.shields.io/badge/commits-8-blue.svg) ![Version](https://img.shields.io/badge/tag-v1.0-orange.svg)
+![techs](https://img.shields.io/badge/techs-javascript—scss—react-purple.svg)
 
-In the project directory, you can run:
+Email Marketing is an open source tool that allows you to load your customer databases from an Excel file and then search for the column 'E-mails' the column should have this name otherwise the program will not renew the email addresses, Once the email addresses are located within the Excel file, you can proceed to create a mail body and then send the message to each email address.
 
-### `npm start`
+---
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p align="center">
+  <img alt="Maps image" src="https://s3.amazonaws.com/images.andrewakosta.com/email-marketing.jpeg">
+</p>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<p>Before running the project you need to configure the endpoint pointing to the <a hrfe="https://github.com/andrewakosta/email-marketing-backend">backend</a>, this endpoint is found in the following path  <code>/src/config/axios.js</code></p>
 
-### `npm test`
+<p>Once the endpoint is configured, you create a user and load the Excel files, clicking on the name of the Excel will open a view like the following</p>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center">
+  <img alt="Email image" src="https://s3.amazonaws.com/images.andrewakosta.com/html-edito-email-marketing.jpeg">
+</p>
 
-### `npm run build`
+<p>By clicking the word allow you can change the status of the mail to not-allow in this way the address will be ignored when sending the email.</p>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+finally click on send emails and that's all.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project is still in development so if you want to collaborate go ahead make a pull request...:)

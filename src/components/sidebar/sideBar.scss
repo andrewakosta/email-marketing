@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+.sidebar {
+  background-color: #1b1b24;
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+    background-image: url("../../resource/avatar.png");
+    background-position: center;
+    border: rgb(1, 49, 1) 3px solid;
+    color: #053004;
+    font-size: 70px;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-family: "Varela Round", sans-serif;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin-left: 15%;
+    margin-top: 40px;
+
+    .link {
+      font-family: "Roboto", sans-serif;
+      text-decoration: none;
+      width: 100%;
+      color: rgb(6, 83, 23);
+      margin-bottom: 20px;
+      padding: 12px;
+      border-radius: 15px;
+
+      i {
+        margin-bottom: 20px;
+        margin-right: 20px;
+        color: #0a5e23;
+
+        a {
+          margin-left: 12px;
+          width: 100%;
+        }
+      }
+
+      &:hover {
+        color: #093809;
+      }
+    }
+  }
+}
+.selected {
+  background-color: #121219;
+}
