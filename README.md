@@ -11,7 +11,7 @@ Email Marketing is an open source tool that allows you to load your customer dat
   <img alt="Maps image" src="https://s3.amazonaws.com/images.andrewakosta.com/email-marketing.jpeg">
 </p>
 
-<p>Before running the project you need to configure the endpoint pointing to the <a hrfe="https://github.com/andrewakosta/email-marketing-backend">backend</a>, this endpoint is found in the following path  <code>/src/config/axios.js</code></p>
+<p>Before running the project you need to configure the endpoint pointing to the <a href="https://github.com/andrewakosta/email-marketing-backend">backend</a>, this endpoint is found in the following path  <code>/src/config/axios.js</code></p>
 
 <p>Once the endpoint is configured, you create a user and load the Excel files, clicking on the name of the Excel will open a view like the following</p>
 
