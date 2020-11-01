@@ -4,6 +4,8 @@ import filesContext from '../../context/files/filesContex'
 import authContext from '../../context/auth/authContext'
 import File  from './File'
 import {AiOutlineCloudUpload} from 'react-icons/ai'
+
+import { Ellipsis } from "react-spinners-css";
 import './files.scss'
 const Files = (props) => {
     
@@ -13,13 +15,11 @@ const Files = (props) => {
 
     useEffect(() => {
 
-     if(true){
-      
+     if(loadingAuth === false){
         getFiles(user._id)
-
      }
      //eslint-disable-next-line   
-    },[refreshFiles])
+    },[refreshFiles, loadingAuth])
 
     const handleInputFile = e => {
         uploadFiles(e.target.files,user._id)
@@ -33,7 +33,7 @@ const Files = (props) => {
                <input type="file" id="file" accept=".xlsx"  multiple onChange={handleInputFile} hidden/>
             </div>
             <hr/>
-            {loading ? "Loading..": files.length === 0  ? "No files" : files.map((file, index)=> <File key={index} history={props.history} file={file}/>) }
+            {loading ? <div className='spinner'><Ellipsis color='green'/></div>: files.length === 0  ? "No files" : files.map((file, index)=> <File key={index} history={props.history} file={file}/>) }
         </div>
      );
 }

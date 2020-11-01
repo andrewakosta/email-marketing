@@ -12,7 +12,7 @@ const AuthSatate = props => {
         token: localStorage.getItem('token'),
         authenticate:null,
         user:null,
-        loadingUser:null, 
+        loadingAuth:true, 
         message:null
     }
 
@@ -79,7 +79,7 @@ const AuthSatate = props => {
     return ( 
         <authContext.Provider
             value={{
-                loadingUser:state.loadingUser,
+                loadingAuth:state.loadingAuth,
                 user:state.user,
                 token:state.token,
                 authenticate:state.authenticate,

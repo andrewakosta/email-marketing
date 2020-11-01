@@ -7,7 +7,7 @@ export default (state, action)=> {
                 ...state, 
                 authenticate:true,
                 user:action.payload,
-                loadingUser:true
+                loadingAuth:false
             }
         case REGSITER:    
         case LOGIN:
@@ -15,7 +15,7 @@ export default (state, action)=> {
             return {
                 ...state, 
                 authenticate:true,
-                message:null
+                message:null, 
             }   
         case ERROR_AUTH:
             return{

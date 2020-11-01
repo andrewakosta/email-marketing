@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #121219;
+
+  .login {
+    background-color: #1b1b24;
+    border-radius: 10px;
+    padding: 25px;
+    width: 300px;
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+
+      h4 {
+        font-family: "Roboto", sans-serif;
+        font-size: 25px;
+        text-align: center;
+        color: rgb(57, 153, 57);
+      }
+
+      .email {
+        color: green;
+        font-family: "Roboto", sans-serif;
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        input[type="text"] {
+          margin: 6px 0 18px 6px;
+          height: 25px;
+          font-size: large;
+          background-color: transparent;
+          border: none;
+          border-bottom: olivedrab solid 2px;
+          font-family: "Roboto", sans-serif;
+          color: rgb(147, 172, 147);
+          &:focus {
+            outline: none;
+            border-bottom: green solid 2px;
+          }
+        }
+      }
+
+      .password {
+        font-family: "Roboto", sans-serif;
+        display: flex;
+        flex-direction: column;
+        color: rgb(8, 100, 8);
+        input[type="password"] {
+          margin: 6px 0 18px 6px;
+          height: 25px;
+          background-color: transparent;
+          border: none;
+          border-bottom: olivedrab solid 2px;
+          font-family: "Roboto", sans-serif;
+          color: rgb(147, 172, 147);
+
+          &:focus {
+            outline: none;
+            border-bottom: green solid 2px;
+          }
+        }
+      }
+
+      input[type="submit"] {
+        background-color: rgb(57, 153, 57);
+        border: none;
+        border-radius: 8px;
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        color: rgb(1, 56, 1);
+        padding: 10px 15px;
+        cursor: pointer;
+        margin-bottom: 10px;
+
+        &:hover {
+          background-color: rgb(20, 92, 20);
+        }
+      }
+      p {
+        text-align: right;
+        color: rgb(2, 75, 2);
+        cursor: pointer;
+        &:hover {
+          color: rgb(4, 110, 4);
+        }
+      }
+    }
+  }
+}

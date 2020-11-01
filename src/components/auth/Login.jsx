@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useEffect } from 'react';
 import authContext from '../../context/auth/authContext'
-
+import './login.scss'
 const Login = (props) => {
     const authContext_ = useContext(authContext) 
    
@@ -41,8 +41,9 @@ const Login = (props) => {
         setRegisterStatus(!register)
     }
     return ( 
-       <>   
-             {message ? message: null}
+       <div className='login-container'>   
+            <div className='login'>
+            {message ? message: null}
             {   
                 register
                  
@@ -76,41 +77,38 @@ const Login = (props) => {
                         onChange={onChange}
                         />
                 </label>
-    
-                <input type="submit" value="Sent" onClick={handleSumit}></input>
-
-    
-                <p onClick={setRegisterStatus_}>Login...</p>
-            </form>
+                 <input type="submit" value="Sent" onClick={handleSumit}></input>
+                  <p onClick={setRegisterStatus_}>Login...</p>
+                </form>
                 :
-                <form>
+                <form className='login-form'>
                 <h4>Login</h4>
-                <label>
+                <label className='email'>
                     E-mail
-                    <input 
-                        type="text"
-                        value={email}
-                        name="email"
-                        onChange={onChange}
-                        />
+                   <input 
+                      type="text"
+                      value={email}
+                      name="email"
+                      onChange={onChange} 
+                      autoComplete='off'
+                   />
                 </label>
-                <label>
+                <label className='password'>
                     Password
                     <input 
                         type="password"
                         value={password}
                         name="password"
                         onChange={onChange}
-                        />
+                    />
                 </label>
-
-    
                 <input type="submit" value="Sent" onClick={handleSumit}></input>
     
                 <p onClick={setRegisterStatus_}>Register for new account...</p>
             </form>
             }
-       </>
+            </div>
+       </div>
 
 
      );
